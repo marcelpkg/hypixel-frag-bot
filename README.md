@@ -1,2 +1,2 @@
-# xdDirti's self-hostable Hypixel Skyblock Frag Discord Bot.
-Test
+# Marcel's Hypixel Discord Frag Bot.
+Coming soon to a Hypixel Skyblock near you.
