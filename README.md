@@ -18,4 +18,5 @@ If you are going to use this, please keep the credits in!
 
 # Credits
 uwuraven & oakb: providing alt and testing out bot since I don't have one.
+
 lunar breeze hypixel guild: for the idea!
