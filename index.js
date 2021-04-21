@@ -18,8 +18,8 @@ client.on("ready", () => {
 const mc = mineflayer.createBot({
     host: 'mc.hypixel.net',
     port: 25565,
-    username: config["minecraft-username"],
-    password: config["minecraft-password"]
+    username: config.minecraftusername,
+    password: config.minecraftpassword
 })
 
 mc.on("login", async => {
