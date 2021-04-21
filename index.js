@@ -96,4 +96,4 @@ client.on(`message`, async message => {
     }
 })
 
-client.login(config["discord-bot-token"])
+client.login(config.discordtoken)
