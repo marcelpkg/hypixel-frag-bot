@@ -16,8 +16,6 @@ DM ducky#2974 on discord.
 # Notes
 If you are going to use this, please keep the credits in! 
 
-CREDITS:
-uwuraven & oakb: testing out bot since i dont have an alt
-lunar breeze guild: for the idea
-
-
+# Credits
+uwuraven & oakb: providing alt and testing out bot since I don't have one.
+lunar breeze hypixel guild: for the idea!
