@@ -1,7 +1,7 @@
 {
-    "token": "TOKEN_HERE",
+    "discord-bot-token": "TOKEN_HERE",
     "prefix": "f!",
 
-    "minecraft-username": "USERNAME_HERE",
-    "minecraft-password": "PASSWORD_HERE"
+    "minecraft-username": "MC_EMAIL",
+    "minecraft-password": "MC_PASS"
 }

@@ -16,12 +16,24 @@ client.on("ready", () => {
 // Creating the Minecraft Bot
 
 const mc = mineflayer.createBot({
-    host: 'localhost',
+    host: 'mc.hypixel.net',
     port: 25565,
     username: config["minecraft-username"],
     password: config["minecraft-password"]
 })
 
+mc.on("login", async => {
+    console.log("We have takeoff! Minecraft bot is launched!")
+    mc.chat(`/party leave`)
+    mc.chat(`/l`)
+})
+
+mc.on("message", (chatMsg) => {
+    const msg = chatMsg.toString();
+    if(msg.includes("You're already in a party")) { return
+        message.channel.send("Someone is currently using the bot! Please wait around 5 seconds and try again!")
+    }
+})
 // Main Structure
 client.on(`message`, async message => {
 
@@ -36,7 +48,7 @@ client.on(`message`, async message => {
     // Commands
 
     if(command === "frag") {
-        if(!args[0]) { return
+        if(!args[0]) { return 
             console.log(`${message.author.discriminator} didn't specify a username.`)
             const embed = new Discord.MessageEmbed()
             .setTitle("ERROR:")
@@ -46,6 +58,32 @@ client.on(`message`, async message => {
             .addField("EXAMPLE COMMAND:", `${config.prefix}frag <USERNAME>`)
         } else {
             mc.chat(`/party accept ${args[0]}`)
+
+            mc.on("message", (chatMsg) => {
+                const msg = chatMsg.toString();
+                if(msg.includes("You do not have")) { return
+                    message.channel.send("You have to invite the bot to a party first for it to work!")
+                }
+            })
+
+            mc.on("message", (chatMsg) => {
+                const msg = chatMsg.toString();
+                if(msg.includes("You are already in a party!")) { return
+                    message.channel.send("Someone is currently using the bot! Please wait around 5 seconds and try again!")
+                }
+            })
+
+            setTimeout(leaveParty, 10000);
+            setTimeout(goLobby, 10500)
+
+            function leaveParty() {
+                mc.chat(`/party leave`)
+            }
+            function goLobby() {
+                mc.chat(`/l`)
+            }
+            
+            
         }
     }
 
@@ -58,4 +96,4 @@ client.on(`message`, async message => {
     }
 })
 
-client.login(config.token)
+client.login(config["discord-bot-token"])

@@ -1,0 +1,24 @@
+{
+  "name": "hypixel-frag-bot",
+  "version": "1.0.0",
+  "description": "Coming soon to a Hypixel Skyblock near you.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xdDirti/hypixel-frag-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xdDirti/hypixel-frag-bot/issues"
+  },
+  "homepage": "https://github.com/xdDirti/hypixel-frag-bot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "mineflayer": "^3.6.0",
+    "node-fetch": "^2.6.1"
+  }
+}
