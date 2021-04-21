@@ -1,5 +1,5 @@
 {
-    "discord-bot-token": "TOKEN_HERE",
+    "discordtoken": "TOKEN_HERE",
     "prefix": "f!",
 
     "minecraft-username": "MC_EMAIL",
