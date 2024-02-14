@@ -1,8 +1,0 @@
-{
-    "token": "BOTTOKEN", 
-    "prefix": "f!",
-
-    "minecraftusername" : "MCUSER",
-    "minecraftemail": "MCEMAIL",
-    "minecraftpassword": "MCPASS"
-}
